@@ -10,6 +10,19 @@ typedef struct{
     int fun; //adalah tingkat kesenangan dari karakter pemain
 }SIMS;
 
+/*** Konstkurtor ***/
+void start(SIMS *charSims);
+
+/*** Selektor ***/
+void Sethygiene(SIMS *charSims, int hy);
+
+void Setenergy(SIMS *charSims, int en);
+
+void Setfun(SIMS *charSims, int fun);
+
+void SetStatus(SIMS *charSims, int hy, int en, int fun);
+
+
 void tidur(SIMS *charSims, int jenis);
 //Aksi tidur mempunyai 2 pilihan:
 //siang(+10 energy) || malam(+15 energy)
