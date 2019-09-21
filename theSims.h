@@ -9,16 +9,19 @@ typedef struct{
     int energy; //adalah tingkat energi yang dimiliki karakter pemain
     int fun; //adalah tingkat kesenangan dari karakter pemain
 }SIMS;
+#define hy(charSims)   (charSims).hygiene
+#define en(charSims)   (charSims).energy
+#define fun(charSims)   (charSims).fun
 
 /*** Konstkurtor ***/
 void start(SIMS *charSims);
 
 /*** Selektor ***/
-void getHygiene(SIMS charSims, int hy);
+int getHygiene(SIMS charSims);
 
-void getEnergy(SIMS charSims, int en);
+int getEnergy(SIMS charSims);
 
-void getFun(SIMS charSims, int fun);
+int getFun(SIMS charSims, int fun);
 
 void setHygiene(SIMS *charSims, int hy);
 
@@ -70,3 +73,5 @@ void cuciTangan(SIMS *charSims);
 
 void musikRadio(SIMS *charSims);
 //Aksi musikRadio menyebabkan +10 fun, -5 energy
+
+#endif
