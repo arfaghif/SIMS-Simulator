@@ -62,6 +62,11 @@ boolean isAttributeValid(int hy,int en, int fun){
 boolean isAddAttributeValid(SIMS charSIMS, int hy, int en, int fun){
     return isAttributeValid(getHygiene(charSIMS)+hy, getEnergy(charSIMS)+en,getFun(charSIMS)+fun);
 }
+
+void outCurStatus(SIMS charSIMS){
+    printf("Hygiene = %d\nEnergy %d\nFun = %d\n", getHygiene(charSIMS),getEnergy(charSIMS),getFun(charSIMS));
+}
+
 void tidur(SIMS *charSims, int jenis){
 //Aksi tidur mempunyai 2 pilihan:
 //siang(+10 energy) || malam(+15 energy)
@@ -70,6 +75,7 @@ void tidur(SIMS *charSims, int jenis){
         case 1:
             if (isAddAttributeValid(*charSims, 0,10,0)){
                 addStatus(charSims, 0,10,0);
+                outCurStatus(*charSims);
             } else{
                 printf("Aksi tidak valid");
             }
@@ -78,26 +84,103 @@ void tidur(SIMS *charSims, int jenis){
         default:
             if (isAddAttributeValid(*charSims, 0,15,0)){
                 addStatus(charSims, 0,15,0);
+                outCurStatus(*charSims);
             } else{
                 printf("Aksi tidak valid");
             }
     }
 }
 
-void makan(SIMS *charSims, int jenis);
-//Aksi makan mempunyai 4 pilihan:
+void makan(SIMS *charSims, int jenis){
+//Aksi makan mempunyai 3 pilihan:
 //hamburger(+5 energy) || pizza(+10 energy) || steak(+15 energy) || beans(+15 energy)
+    switch (jenis)
+    {
+        case 1:
+            if (isAddAttributeValid(*charSims, 0,10,0)){
+                addStatus(charSims, 0,10,0);
+                outCurStatus(*charSims);
+            } else{
+                printf("Aksi tidak valid");
+            }
+            break;
 
-void minum(SIMS *charSims, int jenis);
+        default:
+            if (isAddAttributeValid(*charSims, 0,15,0)){
+                addStatus(charSims, 0,15,0);
+                outCurStatus(*charSims);
+            } else{
+                printf("Aksi tidak valid");
+            }
+    }
+}
+
+void minum(SIMS *charSims, int jenis){
 //Aksi minum mempunyai 3 pilihan:
 //air(-5 hygiene) || kopi(+5 energy, -10 hygiene) || jus(+10 energy, -5 hygiene)
+    switch (jenis)
+    {
+        case 1:
+            if (isAddAttributeValid(*charSims, 0,5,0)){
+                addStatus(charSims, 0,5,0);
+                outCurStatus(*charSims);
+            } else{
+                printf("Aksi tidak valid");
+            }
+            break;
+        case 2:
+            if (isAddAttributeValid(*charSims, 0,10,0)){
+                addStatus(charSims, 0,10,0);
+                outCurStatus(*charSims);
+            } else{
+                printf("Aksi tidak valid");
+            }
+            break;
 
-void buangAir(SIMS *charSims, int jenis);
+        default:
+            if (isAddAttributeValid(*charSims, 0,15,0)){
+                addStatus(charSims, 0,15,0);
+                outCurStatus(*charSims);
+            } else{
+                printf("Aksi tidak valid");
+            }
+    }
+}
+
+void buangAir(SIMS *charSims, int jenis){
 //Aksi buangAir mempunyai 2 pilihan:
 //kecil(+5 hygiene) || besar(+10 hygiene, -5 energy)
+    switch (jenis)
+    {
+        case 1:
+            if (isAddAttributeValid(*charSims, 5,0,0)){
+                addStatus(charSims, 5,0,0);
+                outCurStatus(*charSims);
+            } else{
+                printf("Aksi tidak valid");
+            }
+            break;
 
-void sosialKafe(SIMS *charSims);
+        default:
+            if (isAddAttributeValid(*charSims, 10,-5,0)){
+                addStatus(charSims, 10,-5,0);
+                outCurStatus(*charSims);
+            } else{
+                printf("Aksi tidak valid");
+            }
+    }
+}
+
+
+void sosialKafe(SIMS *charSims){
 //Aksi sosialKafe menyebabkan +15 fun, -10 energy, -5 hygiene
+     if (isAddAttributeValid(*charSims, 15,10,-5)){
+        addStatus(charSims, 15,10,-5);
+        outCurStatus(*charSims);
+    } else{
+        printf("Aksi tidak valid");
+    }
+}
 
 void sosialMedia(SIMS *charSims);
 //Aksi sosialMedia menyebabkan +10 fun, -10 energy
