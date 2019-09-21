@@ -64,12 +64,7 @@ boolean isAddAttributeValid(SIMS charSIMS, int hy, int en, int fun){
 }
 
 void outCurStatus(SIMS charSIMS){
-    printf(
-        "Hygiene = %d\n
-        Energy = %d\n
-        Fun = %d\n"
-        ,getHygiene(charSIMS),getEnergy(charSIMS),getFun(charSIMS)
-    );
+    printf("Hygiene = %d\nEnergy = %d\nFun = %d\n",getHygiene(charSIMS),getEnergy(charSIMS),getFun(charSIMS));
 }
 
 void tidur(SIMS *charSims, int jenis){
@@ -82,7 +77,7 @@ void tidur(SIMS *charSims, int jenis){
                 addStatus(charSims, 0,10,0);
                 outCurStatus(*charSims);
             } else{
-                printf("Aksi tidak valid");
+                printf("Aksi tidak valid\n");
             }
             break;
 
@@ -91,7 +86,7 @@ void tidur(SIMS *charSims, int jenis){
                 addStatus(charSims, 0,15,0);
                 outCurStatus(*charSims);
             } else{
-                printf("Aksi tidak valid");
+                printf("Aksi tidak valid\n");
             }
     }
 }
@@ -106,7 +101,7 @@ void makan(SIMS *charSims, int jenis){
                 addStatus(charSims, 0,10,0);
                 outCurStatus(*charSims);
             } else{
-                printf("Aksi tidak valid");
+                printf("Aksi tidak valid\n");
             }
             break;
 
@@ -115,7 +110,7 @@ void makan(SIMS *charSims, int jenis){
                 addStatus(charSims, 0,15,0);
                 outCurStatus(*charSims);
             } else{
-                printf("Aksi tidak valid");
+                printf("Aksi tidak valid\n");
             }
     }
 }
@@ -130,7 +125,7 @@ void minum(SIMS *charSims, int jenis){
                 addStatus(charSims, 0,5,0);
                 outCurStatus(*charSims);
             } else{
-                printf("Aksi tidak valid");
+                printf("Aksi tidak valid\n");
             }
             break;
         case 2:
@@ -138,7 +133,7 @@ void minum(SIMS *charSims, int jenis){
                 addStatus(charSims, 0,10,0);
                 outCurStatus(*charSims);
             } else{
-                printf("Aksi tidak valid");
+                printf("Aksi tidak valid\n");
             }
             break;
 
@@ -147,7 +142,7 @@ void minum(SIMS *charSims, int jenis){
                 addStatus(charSims, 0,15,0);
                 outCurStatus(*charSims);
             } else{
-                printf("Aksi tidak valid");
+                printf("Aksi tidak valid\n");
             }
     }
 }
@@ -162,7 +157,7 @@ void buangAir(SIMS *charSims, int jenis){
                 addStatus(charSims, 5,0,0);
                 outCurStatus(*charSims);
             } else{
-                printf("Aksi tidak valid");
+                printf("Aksi tidak valid\n");
             }
             break;
 
@@ -171,7 +166,7 @@ void buangAir(SIMS *charSims, int jenis){
                 addStatus(charSims, 10,-5,0);
                 outCurStatus(*charSims);
             } else{
-                printf("Aksi tidak valid");
+                printf("Aksi tidak valid\n");
             }
     }
 }
@@ -183,7 +178,7 @@ void sosialKafe(SIMS *charSims){
         addStatus(charSims, -5,-10,15);
         outCurStatus(*charSims);
     } else{
-        printf("Aksi tidak valid");
+        printf("Aksi tidak valid\n");
     }
 }
 
@@ -193,7 +188,7 @@ void sosialMedia(SIMS *charSims){
         addStatus(charSims,0,-10,10);
         outCurStatus(*charSims);
     } else{
-        printf("Aksi tidak valid");
+        printf("Aksi tidak valid\n");
     }
 }
 void mainKomputer(SIMS *charSims){
@@ -202,7 +197,7 @@ void mainKomputer(SIMS *charSims){
         addStatus(charSims, 0,-10,15);
         outCurStatus(*charSims);
     } else{
-        printf("Aksi tidak valid");
+        printf("Aksi tidak valid\n");
     }
 }
 void mandi(SIMS *charSims){
@@ -211,7 +206,7 @@ void mandi(SIMS *charSims){
         addStatus(charSims, 15,-5,0);
         outCurStatus(*charSims);
     } else{
-        printf("Aksi tidak valid");
+        printf("Aksi tidak valid\n");
     }
 }
 void cuciTangan(SIMS *charSims){
@@ -220,7 +215,7 @@ void cuciTangan(SIMS *charSims){
         addStatus(charSims, 5,0,0);
         outCurStatus(*charSims);
     } else{
-        printf("Aksi tidak valid");
+        printf("Aksi tidak valid\n");
     }
 }
 void musikRadio(SIMS *charSims){
@@ -229,7 +224,7 @@ void musikRadio(SIMS *charSims){
         addStatus(charSims, 0,-5,10);
         outCurStatus(*charSims);
     } else{
-        printf("Aksi tidak valid");
+        printf("Aksi tidak valid\n");
     }
 }
 void membaca(SIMS *charSims, int jenis){
@@ -240,7 +235,7 @@ void membaca(SIMS *charSims, int jenis){
                 addStatus(charSims, 0,-5,5);
                 outCurStatus(*charSims);
             } else{
-                printf("Aksi tidak valid");
+                printf("Aksi tidak valid\n");
             }
             break;
 
@@ -249,7 +244,7 @@ void membaca(SIMS *charSims, int jenis){
                 addStatus(charSims, 0,-5,10);
                 outCurStatus(*charSims);
             } else{
-                printf("Aksi tidak valid");
+                printf("Aksi tidak valid\n");
             }
     }
 }

@@ -21,7 +21,7 @@ int getHygiene(SIMS charSims);
 
 int getEnergy(SIMS charSims);
 
-int getFun(SIMS charSims, int fun);
+int getFun(SIMS charSims);
 
 void setHygiene(SIMS *charSims, int hy);
 
