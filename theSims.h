@@ -39,6 +39,7 @@ void addFun(SIMS *charSims, int fun);
 
 void addStatus(SIMS *charSims, int hy, int en, int fun);
 
+void outCurStatus(SIMS charSIMS);
 
 void tidur(SIMS *charSims, int jenis);
 //Aksi tidur mempunyai 2 pilihan:
@@ -73,5 +74,7 @@ void cuciTangan(SIMS *charSims);
 
 void musikRadio(SIMS *charSims);
 //Aksi musikRadio menyebabkan +10 fun, -5 energy
+
+void membaca(SIMS *charSims, int jenis);
 
 #endif

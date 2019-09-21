@@ -174,25 +174,77 @@ void buangAir(SIMS *charSims, int jenis){
 
 void sosialKafe(SIMS *charSims){
 //Aksi sosialKafe menyebabkan +15 fun, -10 energy, -5 hygiene
-     if (isAddAttributeValid(*charSims, 15,10,-5)){
-        addStatus(charSims, 15,10,-5);
+     if (isAddAttributeValid(*charSims, -5,-10,15)){
+        addStatus(charSims, -5,-10,15);
         outCurStatus(*charSims);
     } else{
         printf("Aksi tidak valid");
     }
 }
 
-void sosialMedia(SIMS *charSims);
+void sosialMedia(SIMS *charSims){
 //Aksi sosialMedia menyebabkan +10 fun, -10 energy
-
-void mainKomputer(SIMS *charSims);
+     if (isAddAttributeValid(*charSims, 0,-10,10)){
+        addStatus(charSims,0,-10,10);
+        outCurStatus(*charSims);
+    } else{
+        printf("Aksi tidak valid");
+    }
+}
+void mainKomputer(SIMS *charSims){
 //Aksi mainKomputer menyebabkan +15 fun
-
-void mandi(SIMS *charSims);
+     if (isAddAttributeValid(*charSims, 0,-10,15)){
+        addStatus(charSims, 0,-10,15);
+        outCurStatus(*charSims);
+    } else{
+        printf("Aksi tidak valid");
+    }
+}
+void mandi(SIMS *charSims){
 //Aksi mandi menyebabkan +15 hygiene, -5 energy
-
-void cuciTangan(SIMS *charSims);
+     if (isAddAttributeValid(*charSims, 15,-5,0)){
+        addStatus(charSims, 15,-5,0);
+        outCurStatus(*charSims);
+    } else{
+        printf("Aksi tidak valid");
+    }
+}
+void cuciTangan(SIMS *charSims){
 //Aksi cuciTangan menyebabkan +5 hygiene
-
-void musikRadio(SIMS *charSims);
+     if (isAddAttributeValid(*charSims, 5,0,0)){
+        addStatus(charSims, 5,0,0);
+        outCurStatus(*charSims);
+    } else{
+        printf("Aksi tidak valid");
+    }
+}
+void musikRadio(SIMS *charSims){
 //Aksi musikRadio menyebabkan +10 fun, -5 energy
+     if (isAddAttributeValid(*charSims, 0,-5,10)){
+        addStatus(charSims, 0,-5,10);
+        outCurStatus(*charSims);
+    } else{
+        printf("Aksi tidak valid");
+    }
+}
+void membaca(SIMS *charSims, int jenis){
+    switch (jenis)
+    {
+        case 1:
+            if (isAddAttributeValid(*charSims, 0,-5,5)){
+                addStatus(charSims, 0,-5,5);
+                outCurStatus(*charSims);
+            } else{
+                printf("Aksi tidak valid");
+            }
+            break;
+
+        default:
+            if (isAddAttributeValid(*charSims, 0,-5,10)){
+                addStatus(charSims, 0,-5,10);
+                outCurStatus(*charSims);
+            } else{
+                printf("Aksi tidak valid");
+            }
+    }
+}
