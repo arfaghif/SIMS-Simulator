@@ -64,7 +64,12 @@ boolean isAddAttributeValid(SIMS charSIMS, int hy, int en, int fun){
 }
 
 void outCurStatus(SIMS charSIMS){
-    printf("Hygiene = %d\nEnergy %d\nFun = %d\n", getHygiene(charSIMS),getEnergy(charSIMS),getFun(charSIMS));
+    printf(
+        "Hygiene = %d\n
+        Energy = %d\n
+        Fun = %d\n"
+        ,getHygiene(charSIMS),getEnergy(charSIMS),getFun(charSIMS)
+    );
 }
 
 void tidur(SIMS *charSims, int jenis){
