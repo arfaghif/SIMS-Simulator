@@ -14,13 +14,27 @@ typedef struct{
 void start(SIMS *charSims);
 
 /*** Selektor ***/
-void Sethygiene(SIMS *charSims, int hy);
+void getHygiene(SIMS charSims, int hy);
 
-void Setenergy(SIMS *charSims, int en);
+void getEnergy(SIMS charSims, int en);
 
-void Setfun(SIMS *charSims, int fun);
+void getFun(SIMS charSims, int fun);
 
-void SetStatus(SIMS *charSims, int hy, int en, int fun);
+void setHygiene(SIMS *charSims, int hy);
+
+void setEnergy(SIMS *charSims, int en);
+
+void setFun(SIMS *charSims, int fun);
+
+void setStatus(SIMS *charSims, int hy, int en, int fun);
+
+void addHygiene(SIMS *charSims, int hy);
+
+void addEnergy(SIMS *charSims, int en);
+
+void addFun(SIMS *charSims, int fun);
+
+void addStatus(SIMS *charSims, int hy, int en, int fun);
 
 
 void tidur(SIMS *charSims, int jenis);
