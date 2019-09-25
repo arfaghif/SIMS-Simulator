@@ -58,29 +58,23 @@ void infoSubMenu(int jenis){
             printf("1. Tidur Siang \n");
             printf("2. Tidur Malam \n");
             break;
-        // case 2:
-        //     printf("
-        //     Pilih Jenis Makanan:\n
-        //     1. Makan Hamburger \n
-        //     2. Makan Pizza \n
-        //     3. Makan Steak and Beans\n
-        //     ")
-        //     break;
-        // case 3:
-        //     printf("
-        //     Pilih jenis Minuman:\n
-        //     1. Minum Air \n
-        //     2. Minum Kopi \n
-        //     3. Minum Jus\n
-        //     ")
-        //     break;
-        // case 4:
-        //     printf("
-        //     Pilih Jenis Buang Air:\n
-        //     1. Buang Air Kecil\n
-        //     2. Buang Air Besar\n
-        //     ")
-        //     break;
+            case 2:
+            printf("Pilih Jenis Makanan:\n");
+            printf("1. Makan Hamburger \n");
+            printf("2. Makan Pizza \n");
+            printf("3. Makan Steak and Beans\n");
+            break;
+        case 3:
+            printf("Pilih jenis Minuman:\n");
+            printf("1. Minum Air \n");
+            printf("2. Minum Kopi \n");
+            printf("3. Minum Jus\n");
+            break;
+        case 4:
+            printf("Pilih Jenis Buang Air:\n");
+            printf("1. Buang Air Kecil\n");
+            printf("2. Buang Air Besar\n");
+            break;
         default:
             printf("Pilih Jenis Bacaan:\n");
             printf("1. Membaca Koran \n");

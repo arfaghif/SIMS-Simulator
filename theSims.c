@@ -97,6 +97,14 @@ void makan(SIMS *charSims, int jenis){
     switch (jenis)
     {
         case 1:
+            if (isAddAttributeValid(*charSims, 0,5,0)){
+                addStatus(charSims, 0,5,0);
+                outCurStatus(*charSims);
+            } else{
+                printf("Aksi tidak valid\n");
+            }
+            break;
+        case 2:
             if (isAddAttributeValid(*charSims, 0,10,0)){
                 addStatus(charSims, 0,10,0);
                 outCurStatus(*charSims);
@@ -121,16 +129,16 @@ void minum(SIMS *charSims, int jenis){
     switch (jenis)
     {
         case 1:
-            if (isAddAttributeValid(*charSims, 0,5,0)){
-                addStatus(charSims, 0,5,0);
+            if (isAddAttributeValid(*charSims, -5,0,0)){
+                addStatus(charSims, -5,0,0);
                 outCurStatus(*charSims);
             } else{
                 printf("Aksi tidak valid\n");
             }
             break;
         case 2:
-            if (isAddAttributeValid(*charSims, 0,10,0)){
-                addStatus(charSims, 0,10,0);
+            if (isAddAttributeValid(*charSims, -10,5,0)){
+                addStatus(charSims, -10,5,0);
                 outCurStatus(*charSims);
             } else{
                 printf("Aksi tidak valid\n");
@@ -138,8 +146,8 @@ void minum(SIMS *charSims, int jenis){
             break;
 
         default:
-            if (isAddAttributeValid(*charSims, 0,15,0)){
-                addStatus(charSims, 0,15,0);
+            if (isAddAttributeValid(*charSims, -5,10,0)){
+                addStatus(charSims, -5,10,0);
                 outCurStatus(*charSims);
             } else{
                 printf("Aksi tidak valid\n");
