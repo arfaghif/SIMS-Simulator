@@ -5,19 +5,25 @@
 
 void begin(SIMS *charSims){
     boolean win;
-    printf("Selamat datang di permainan The Sims \n");
-    printf("Pada permainan ini anda akan memainkan suatu karakter\n");
-    printf("Karakter ini mempunyai tiga status: \n");
-    printf("1. Hygiene, merupakan tingkat kebersihan dan keinginan membuang air dari pemain.\n");
-    printf("2. Energy, merupakan tingkat kelaparan dan energi dari pemain.\n");
-    printf("3. Fun, merupakan tinggal sosial dan kesenangan dari pemain.\n");
-    printf("Anda akan memulai permainan dalam kondisi bangun tidur\n");
-    printf("Dan anda akan diminta melakukan berbagai aksi yang telah disediakan\n");
-    printf("Permainan hanya akan berakhir\n");
-    printf("jika seluruh status pemain 0\n");
-    printf("atau seluruh status pemain terisi penuh\n");
+    printf("************************************\n");
+    printf("*\t THE SIMS SIMULATOR \t   *\n");
+    printf("************************************\n");
     printf("\n");
-    printf("GAME DIMULAI\n");
+    printf("Selamat datang di permainan THE SIMS \n");
+    printf("Pada permainan ini anda akan memainkan suatu karakter\n");
+    printf("\n");
+    printf("Karakter ini mempunyai tiga status: \n");
+    printf("\t1. Hygiene : tingkat kebersihan dan keinginan membuang air dari pemain.\n");
+    printf("\t2. Energy : tingkat kelaparan dan energi dari pemain.\n");
+    printf("\t3. Fun : tinggal sosial dan kesenangan dari pemain.\n");
+    printf("\n");
+    printf("Anda akan memulai permainan dalam kondisi bangun tidur => 0 hygiene | 10 energy | 0 fun\n");
+    printf("Dan anda akan diminta melakukan berbagai aksi yang telah disediakan\n");
+    printf("Permainan hanya akan berakhir :\n");
+    printf("\tjika seluruh status pemain 0\n");
+    printf("\tatau seluruh status pemain terisi penuh (15)\n");
+    printf("\n");
+    printf("!!! GAME DIMULAI !!!\n");
     start(charSims);
     infoMenu();
     ("Pilih Aksi\n");
@@ -28,14 +34,25 @@ void begin(SIMS *charSims){
     }
     while (!(isFinish(*charSims, &win)));
     if (win){
-        printf("Selamat Anda Menang\n");
+        printf("\n");
+        printf("!!! GAME BERAKHIR !!!\n");
+        printf("\n");
+        printf("************************************\n");
+        printf("*\tSELAMAT ANDA MENANG \t   *\n");
+        printf("************************************\n");
     } else{
-        printf("Maaf Anda Kalah \n");
+        printf("\n");
+        printf("!!! GAME BERAKHIR !!!\n");
+        printf("\n");  
+        printf("************************************\n");
+        printf("*\tMAAF ANDA KALAH \t   *\n");
+        printf("************************************\n");
     }
 
 }
 
 void infoMenu(){
+    printf("\n");
     printf("Berikut adalah pilihan aksi:\n");
     printf("1. Tidur\n");
     printf("2. Makan\n");
@@ -47,7 +64,7 @@ void infoMenu(){
     printf("8. Mandi\n");
     printf("9. Cuci Tangan\n");
     printf("10. Mendengarkan Musik di Radio\n");
-    printf("Membaca\n");
+    printf("11. Membaca\n");
 }
 
 void infoSubMenu(int jenis){
@@ -86,27 +103,34 @@ void infoSubMenu(int jenis){
 
 void doingGame(SIMS *charSims){
     int option, suboption;
+    printf("\n");
+    printf("Masukkan pilihan aksi: ");
     scanf("%d",&option);
     switch (option)
     {
         case 1:
             infoSubMenu(1);
             scanf("%d", &suboption);
+            printf("\n");
             tidur(charSims,suboption);
             break;
         case 2:
             infoSubMenu(2);
             scanf("%d", &suboption);
+            printf("\n");
             makan(charSims,suboption);
             break;
         case 3:
             infoSubMenu(3);
             scanf("%d", &suboption);
+            printf("\n");
             minum(charSims,suboption);
             break;
         case 4:
             infoSubMenu(4);
             scanf("%d", &suboption);
+            printf("\n");
+
             buangAir(charSims,suboption);
             break;
         case 5:
@@ -130,6 +154,7 @@ void doingGame(SIMS *charSims){
         case 11:
             infoSubMenu(11);
             scanf("%d", &suboption);
+            printf("\n");
             membaca(charSims,suboption);
             break;
         
