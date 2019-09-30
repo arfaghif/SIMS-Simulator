@@ -41,6 +41,10 @@ void addStatus(SIMS *charSims, int hy, int en, int fun);
 
 void outCurStatus(SIMS charSIMS);
 
+boolean isAttributeValid(int hy,int en, int fun);
+
+boolean isAddAttributeValid(SIMS charSIMS, int hy, int en, int fun);
+
 void tidur(SIMS *charSims, int jenis);
 //Aksi tidur mempunyai 2 pilihan:
 //siang(+10 energy) || malam(+15 energy)
