@@ -69,6 +69,7 @@ void outCurStatus(SIMS charSIMS){
     printf("\n");
 }
 
+//Fungsi -fungsi Alfabet
 void tidur(SIMS *charSims, int jenis){
 //Aksi tidur mempunyai 2 pilihan:
 //siang(+10 energy) || malam(+15 energy)
