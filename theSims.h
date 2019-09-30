@@ -55,8 +55,10 @@ void outCurStatus(SIMS charSIMS);
 //Prosedur untuk mencetak ke layar status karakter sekarang
 
 boolean isAttributeValid(int hy,int en, int fun);
+//Menghasilkan true jika semua nilai atribut valid
 
 boolean isAddAttributeValid(SIMS charSIMS, int hy, int en, int fun);
+//Menghasilkan true jika semua nilai atribut tetap valid jika dilakukan penambahan
 
 void tidur(SIMS *charSims, int jenis);
 //Aksi tidur mempunyai 2 pilihan:
