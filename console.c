@@ -29,8 +29,10 @@ void begin(SIMS *charSims){
     ("Pilih Aksi\n");
     do{
         doingGame(charSims);
-        printf("Pilih Aksi Kembali\n");
-        printf("Ketik -999 untuk menampilkan menu pilihan kembali\n");
+        if (!(isFinish(*charSims, &win))){
+            printf("Pilih Aksi Kembali\n");
+            printf("Ketik -999 untuk menampilkan menu pilihan kembali\n");
+        }
     }
     while (!(isFinish(*charSims, &win)));
     if (win){
