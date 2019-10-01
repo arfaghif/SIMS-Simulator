@@ -5,6 +5,7 @@
 #include "theSims.h"
 
 void begin(SIMS *charSims);
+//Prosedur untuk memulai permainan
 
 void infoMenu();
 
